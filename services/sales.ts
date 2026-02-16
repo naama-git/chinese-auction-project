@@ -1,9 +1,10 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { computed, inject, Injectable, signal } from '@angular/core';
+import { computed, effect, inject, Injectable, signal } from '@angular/core';
 import { ReadOrderDTO, ReadSimpleOrderDTO } from '../models/PackageOrderCart'
 import { Observable, tap } from 'rxjs';
 import { OrderQParams } from '../models/Filters'
 import qs from 'qs';
+import { UserService } from './user';
 
 @Injectable({
   providedIn: 'root',
@@ -25,6 +26,18 @@ export class SalesService {
 
   setOrder(order: ReadOrderDTO): void {
     this._order.set(order)
+  }
+  private readonly userService = inject(UserService)
+  private lastUserId: number = -1;
+
+  constructor() {
+    effect(() => {
+      const user = this.userService.user();
+      if (user && user.id !== this.lastUserId) {
+        this.lastUserId = user.id;
+        this.getAllOrders(user.token,{});
+      }
+    });
   }
 
 

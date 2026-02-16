@@ -29,13 +29,13 @@
 
 @case ('one-prize') {
 <div class="action-box">
-
-    <nz-input-number nzSize="large" [(ngModel)]="qty"  [nzMin]="1" class="qty-input" />
-    
-    <button  nz-button nz-tooltip [nzTooltipTitle]="drawn ? 'winner already exists' : null" nzType="primary" nzSize="large" [disabled]="drawn" (click)="addPrizeToCart(prizeId, qty)" nzBlock>
+    @if (!isAdmin()) {
+    <nz-input-number nzSize="large" [(ngModel)]="qty" [nzMin]="1" class="qty-input" />
+    <button nz-button nzType="primary" nzSize="large" (click)="addPrizeToCart(prizeId, qty)" nzBlock>
         <span nz-icon nzType="plus-circle"></span>
         Add Tickets
     </button>
+}
 </div>
 }
 
