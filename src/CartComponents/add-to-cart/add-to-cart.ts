@@ -37,7 +37,6 @@ export class AddToCart {
     };
     this.CartService.AddPrizeToCart(cartItem, this.userService.token()).subscribe({
       next: () => {
-        this.messageService.success('Prize added to cart successfully');
         this.CartService.GetCartByUserId(this.userService.token()).subscribe({
           next: cart => {
             this.CartService.setCart(cart);
