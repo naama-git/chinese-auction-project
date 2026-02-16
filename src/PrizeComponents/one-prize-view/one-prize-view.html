@@ -57,7 +57,7 @@
                 <nz-divider></nz-divider>
 
                 <div class="action-box">
-                    <app-cart-actions [prizeId]="prize?.id??null" [viewType]="'one-prize'"/>
+                    <app-cart-actions [drawn]="(prize?.winners?.length??0)>0" [prizeId]="prize?.id??null" [viewType]="'one-prize'"/>
                 </div>
 
             </nz-card>

@@ -1,8 +1,8 @@
 @switch (viewType) {
 @case ('prize-card') {
-<div (click)="addPrizeToCart(prizeId, 1)" class="icon-btn">
+<button nz-button nzType="text" nz-tooltip [nzTooltipTitle]="drawn ? 'winner already exists' : null" [disabled]="drawn" (click)="addPrizeToCart(prizeId, 1)" class="icon-btn">
     <nz-icon nzType="shopping-cart" nzTheme="outline" />
-</div>
+</button>
 }
 
 @case ('cart') {
@@ -30,8 +30,9 @@
 @case ('one-prize') {
 <div class="action-box">
 
-    <nz-input-number nzSize="large" [(ngModel)]="qty" [nzMin]="1" class="qty-input" />
-    <button nz-button nzType="primary" nzSize="large" (click)="addPrizeToCart(prizeId, qty)" nzBlock>
+    <nz-input-number nzSize="large" [(ngModel)]="qty"  [nzMin]="1" class="qty-input" />
+    
+    <button  nz-button nz-tooltip [nzTooltipTitle]="drawn ? 'winner already exists' : null" nzType="primary" nzSize="large" [disabled]="drawn" (click)="addPrizeToCart(prizeId, qty)" nzBlock>
         <span nz-icon nzType="plus-circle"></span>
         Add Tickets
     </button>

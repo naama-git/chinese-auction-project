@@ -40,7 +40,7 @@
 <ng-template #actionEllipsis>
   @if(!isAdmin && isConnected){
 
-  <app-cart-actions [prizeId]="prize?.id??null" />
+  <app-cart-actions [drawn]="winnersExist()" [prizeId]="prize?.id??null" />
 
   }
   @else if(isAdmin){

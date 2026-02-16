@@ -1,4 +1,4 @@
-import { Component, inject, Input } from '@angular/core';
+import { Component, computed, inject, input, Input, signal } from '@angular/core';
 import { MessagesService } from '../../../services/messages';
 import { CartService } from '../../../services/cart-service';
 import { CreateCartItemDTO } from '../../../models/PackageOrderCart';
@@ -7,11 +7,12 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzInputNumberModule } from "ng-zorro-antd/input-number";
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { FormsModule } from '@angular/forms';
+import { NzTooltipModule } from 'ng-zorro-antd/tooltip';
 
 
 @Component({
   selector: 'app-cart-actions',
-  imports: [NzIconModule,NzButtonModule, NzInputNumberModule,FormsModule],
+  imports: [NzIconModule, NzButtonModule,NzTooltipModule, NzInputNumberModule, FormsModule],
   templateUrl: './cart-actions.html',
   styleUrl: './cart-actions.scss',
 })
@@ -21,9 +22,13 @@ export class CartActions {
   userService = inject(UserService);
 
   @Input() prizeId: number | null = null;
-  @Input() viewType: "cart" | "prize-card" | "one-prize" = "prize-card";
 
+  @Input() drawn: boolean | undefined = false
+
+
+  @Input() viewType: "cart" | "prize-card" | "one-prize" = "prize-card";
   @Input() qty: number = 1
+
 
   addPrizeToCart(prizeId: number | null, quantity: number) {
     if (!prizeId) {

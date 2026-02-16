@@ -1,5 +1,4 @@
-
-<div class="cart-page"  >
+<div class="cart-page">
   <div nz-row [nzGutter]="24" nzJustify="center">
 
     <div nz-col nzXs="24" nzLg="16">
@@ -8,29 +7,22 @@
         <nz-list-item>
           <nz-card class="cart-item-card" [nzBordered]="false">
             <div class="cart-item">
-              
-              <img
-                src="https://localhost:7156/{{item.prize.imagePath}}"
-                loading="lazy"
-                class="item-image"
-              />
+
+              <img src="https://localhost:7156/{{item.prize.imagePath}}" loading="lazy" class="item-image" />
 
               <div class="item-details">
                 <h3>{{ item.prize.name }}</h3>
 
                 <div class="categories">
                   @for (c of item.prize.categories; track c) {
-                    <nz-tag>{{ c }}</nz-tag>
+                  <nz-tag>{{ c }}</nz-tag>
                   }
                 </div>
               </div>
 
               <div class="item-actions">
-                <app-cart-actions
-                  [prizeId]="item.prizeId"
-                  [viewType]="'cart'"
-                  [qty]="item.quantity"
-                />
+                <app-cart-actions [drawn]="item.prize.winners.length > 0" [prizeId]="item.prize.id"
+                  [viewType]="'cart'" [qty]="item.quantity" />
               </div>
 
             </div>
@@ -49,7 +41,7 @@
             <span>Total Tickets</span>
             <span>{{ totalItems }}</span>
           </div>
-          
+
           <button nz-button nzType="primary" nzBlock nzSize="large" (click)="nav()">
             Checkout
           </button>
