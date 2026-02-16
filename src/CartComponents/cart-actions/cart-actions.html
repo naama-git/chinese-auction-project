@@ -29,12 +29,13 @@
 
 @case ('one-prize') {
 <div class="action-box">
-
+    @if (!isAdmin()) {
     <nz-input-number nzSize="large" [(ngModel)]="qty" [nzMin]="1" class="qty-input" />
     <button nz-button nzType="primary" nzSize="large" (click)="addPrizeToCart(prizeId, qty)" nzBlock>
         <span nz-icon nzType="plus-circle"></span>
         Add Tickets
     </button>
+}
 </div>
 }
 

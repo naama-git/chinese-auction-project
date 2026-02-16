@@ -36,7 +36,8 @@ export class CartActions {
     };
     this.CartService.AddPrizeToCart(cartItem, this.userService.token()).subscribe({
       next: () => {
-        this.messageService.success('Prize added to cart successfully');
+        if(this.viewType !== 'cart') {
+        this.messageService.success('Prize added to cart successfully');}
         this.CartService.GetCartByUserId(this.userService.token()).subscribe({
           next: cart => {
             this.CartService.setCart(cart);
@@ -54,7 +55,10 @@ export class CartActions {
       }
     })
   }
-
+isAdmin() {
+    const user = this.userService.user();
+    return user?.role === 'Admin';
+  }
 
   deletePrizeFromCart(prizeId: number | null) {
 
@@ -71,7 +75,6 @@ export class CartActions {
 
     this.CartService.RemovePrizeFromCart(prizeId, token).subscribe({
       next: () => {
-        this.messageService.success('Prize removed from cart successfully');
         this.CartService.GetCartByUserId(this.userService.token()).subscribe({
           next: cart => {
             this.CartService.setCart(cart);
