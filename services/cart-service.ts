@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
-import { computed, inject, Injectable, signal } from '@angular/core';
+import { computed, effect, inject, Injectable, signal } from '@angular/core';
 import { ReadCartDTO, CreateCartItemDTO } from '../models/PackageOrderCart'
 import { Observable, tap } from 'rxjs';
+import { UserService } from './user'
 
 @Injectable({
   providedIn: 'root',
@@ -15,13 +16,26 @@ export class CartService {
   private _cart = signal<ReadCartDTO | null>(null);
   readonly cart = computed(() => this._cart());
 
+  private readonly userService = inject(UserService)
+  private lastUserId: number = -1;
+
+  constructor() {
+    effect(() => {
+      const user = this.userService.user();
+      if (user && user.id !== this.lastUserId) {
+        this.lastUserId = user.id;
+        this.GetCartByUserId(user.token);
+      }
+    });
+  }
+
 
   private canAccessCheckout = false;
 
   allowCheckout() {
     this.canAccessCheckout = true;
   }
-  
+
   isCheckoutAllowed(): boolean {
     return this.canAccessCheckout;
   }
@@ -38,7 +52,7 @@ export class CartService {
     }
     return this.http.post<number>(`${this.apiUrl}/AddPrizeToCart/${cartItem.prizeId}`, cartItem.quantity, { headers: { Authorization: "Bearer " + token } });
   }
-  
+
 
   RemovePrizeFromCart(prizeId: number, token: string | null): Observable<number> {
     if (!token) {
