@@ -51,6 +51,9 @@ export class Login {
             this.userService.setUser(user)
 
             this.messageService.success('Welcome back ' + user.name + '!');
+            setTimeout(() => {
+              this.close()
+            }, 500);
 
           },
           error: (err: any) => {
@@ -59,9 +62,7 @@ export class Login {
           }
         })
       this.validateForm.reset();
-      setTimeout(() => {
-        this.close()
-      }, 500);
+
 
 
 
