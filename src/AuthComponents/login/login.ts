@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, EventEmitter, inject, Output } from '@angular/core';
 import { NonNullableFormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 
 import { NzButtonModule } from 'ng-zorro-antd/button';
@@ -25,6 +25,12 @@ export class Login {
   loading: boolean = false;
   error: string | null = null;
 
+  @Output() requestClose = new EventEmitter<void>();
+
+  close(): void {
+    this.requestClose.emit()
+  }
+
   validateForm = this.fb.group({
     email: this.fb.control('', [Validators.required, Validators.email]),
     password: this.fb.control('', [Validators.required]),
@@ -43,16 +49,23 @@ export class Login {
         .subscribe({
           next: user => {
             this.userService.setUser(user)
-           
-          this.messageService.success('Welcome back ' + user.name + '!');
-            
+
+            this.messageService.success('Welcome back ' + user.name + '!');
+            setTimeout(() => {
+              this.close()
+            }, 500);
+
           },
           error: (err: any) => {
             console.error('error login', err);
             this.messageService.error('Login failed', err);
           }
         })
-        this.validateForm.reset();
+      this.validateForm.reset();
+
+
+
+
     }
     else {
       Object.values(this.validateForm.controls).forEach(control => {

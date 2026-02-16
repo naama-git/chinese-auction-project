@@ -5,8 +5,8 @@
             <nz-tabs >
                 @for (tab of tabs; track tab) {
                 @if(tab==1){
-                <nz-tab [nzTitle]="'Login'">
-                    <app-login/>
+                <nz-tab [nzTitle]="'Login'"  >
+                    <app-login (requestClose)="close()"/>
                 </nz-tab>
                 
                 } @else if(tab==2){
