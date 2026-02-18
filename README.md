@@ -27,36 +27,80 @@ This project is the frontend client built with Angular. It communicates with a R
 
 - Financial Analytics: Detailed reporting on raffle revenue, ticket sales, and prize distribution.
 
-## Screenshots
+
+## Project Showcase
+*Visual interface and user experience of the Chinese Auction platform.*
+
 <details>
-  <summary>Click to see more screenshots</summary>
+  <summary><b>Click to expand the full image gallery</b></summary>
+  <br>
+
+  ## User Interface (Client Side)
+  *The experience for customers browsing prizes and purchasing tickets.*
+
+  ### Landing and Authentication
+  | Home Page | Sign In | Sign Up |
+  | :---: | :---: | :---: |
+  | <img src="screenshots/home_page.png" width="250"> | <img src="screenshots/user_login.png" width="250"> | <img src="screenshots/user_signin.png" width="250"> |
+
+  ### Prize Gallery and Selection
+  *Full width views for browsing available prizes.*
   
-  #### Prize View
-  <img src="screenshots/prizes_page.png" width="600">
-  <img src="screenshots/one_prize_page.png" width="400">
-  <img src="screenshots/update_prize.png" width="400">
-  <img src="screenshots/delete_prize.png" width="400">
-  
+  **Full Gallery View:**
+  <img src="screenshots/prizes_view_full.png" width="100%" alt="Full Gallery View">
 
-  #### Order View
-  <img src="screenshots/sales_page.png" width="500">
-  <img src="screenshots/one_order.png" width="500">
+  <br>
 
-  #### Donors View
-  <img src="screenshots/donors_page.png" width="500">
-  <img src="screenshots/edit_donors.png" width="500">
+  **Additional Gallery Views:**
+  <div style="display: flex; overflow-x: auto; gap: 10px; padding-bottom: 10px;">
+    <img src="screenshots/prize_one_view.png" width="350" alt="Single Prize">
+    <img src="screenshots/packages_view.png" width="350" alt="Packages View">
+  </div>
 
-  #### Packages View
-  <img src="screenshots/pkgs_page.png" width="600">
+  ### Checkout Flow
+  *A structured journey from package selection to payment.*
 
-  #### Admin vs. User
-  | Customer Catalog | Admin Dashboard |
-  | :---: | :---: |
-  | <img src="screenshots/prizes_page.png" width="400"> | <img src="screenshots/prizes_page_user.png" width="400"> |
-  
+  | Step 1: Package | Step 2: Information | Step 3: Confirmation | Shopping Cart |
+  | :---: | :---: | :---: | :---: |
+  | <img src="screenshots/order_step1.png" width="180"> | <img src="screenshots/order_step2full.png" width="300"> | <img src="screenshots/order_step3.png" width="180"> | <img src="screenshots/cart_view.png" width="180"> |
+
+  ---
+
+  ## Admin Dashboard (Management Side)
+  *Tools for system administration, donor management, and tracking.*
+
+  ### Donor and Order Management
+  **Full Donor Management View:**
+  <img src="screenshots/donors_view_full.png" width="100%">
+
+  <br>
+
+  | Add Donor | Orders Overview | Reports |
+  | :---: | :---: | :---: |
+  | <img src="screenshots/donor_add.png" width="250"> | <img src="screenshots/orders_view.png" width="250"> | <img src="screenshots/reports_view.png" width="250"> |
+
+  ### Inventory and System Tools
+  <div style="display: flex; overflow-x: auto; gap: 10px; padding-bottom: 10px;">
+    <img src="screenshots/packages_admin.png" width="300" title="Admin Packages">
+    <img src="screenshots/prize_add.png" width="300" title="Add Prize">
+    <img src="screenshots/prize_delete.png" width="300" title="Delete Prize">
+    <img src="screenshots/donors_view.png" width="300" title="Donor List">
+    <img src="screenshots/order_one_view.png" width="300" title="Order Details">
+    
+  </div>
+
+  ---
+
+  ## UI Components and States
+  *Error handling and system animations.*
+
+  <div style="display: flex; overflow-x: auto; gap: 10px;">
+    <img src="screenshots/not_found.png" width="250" title="404 Error">
+    <img src="screenshots/total.gif" width="250" title="Total Calculation">
+    <img src="screenshots/user_logout.gif" width="250" title="Secure Logout">
+  </div>
+
 </details>
-
-
 ## Getting Started
 Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
