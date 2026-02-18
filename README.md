@@ -1,9 +1,6 @@
 # Chinese Auction Client
 
-This is a Chinese Auction Management System built with Angular. The application provides a seamless and interactive experience for users to browse prize packages, purchase tickets, and participate in raffles.
-
-🚧 This project is currently under active development. 
- Expect breaking changes and incomplete features
+This is a Chinese Auction Management System built with Angular. The application provides a seamless and interactive experience for users to browse prize packages, purchase tickets, and participate in raffles
 
 This project is the frontend client built with Angular. It communicates with a REST API in the following link:
 [Backend Repository](https://github.com/naama-git/chinese-auction-api.git))
