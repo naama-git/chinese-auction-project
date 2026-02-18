@@ -11,24 +11,24 @@ This project is the frontend client built with Angular. It communicates with a R
 ## Key Features
 ### User Experience & Catalog
 
-- [x] Dynamic Prize Catalog: Browse and filter prizes by categories and contributors with a interactive UI.
+-  Dynamic Prize Catalog: Browse and filter prizes by categories and contributors with a interactive UI.
 
 -  Advanced Shopping Cart: Manage ticket selections with a persistent cart system and a seamless checkout process.
 
-- [x] Secure Authentication: User registration and login system for a personalized experience.
+-  Secure Authentication: User registration and login system for a personalized experience.
 
 ### Admin & Management
 
-- [x] Full CRUD Management: Complete control over prizes, donors, categories, and ticket packages.
+-  Full CRUD Management: Complete control over prizes, donors, categories, and ticket packages.
 
-- [x] Role-Based Access Control (RBAC): Granular permissions for viewing sensitive data like orders and contributor lists.
+-  Role-Based Access Control (RBAC): Granular permissions for viewing sensitive data like orders and contributor lists.
 
 - Automated Raffle Engine: Tools for conducting draws and generating instant winner announcements.
 
 - Financial Analytics: Detailed reporting on raffle revenue, ticket sales, and prize distribution.
 
 
-## Project Showcase
+## Project Gallery
 *Visual interface and user experience of the Chinese Auction platform.*
 
 <details>
@@ -36,72 +36,83 @@ This project is the frontend client built with Angular. It communicates with a R
   <br>
 
   ## User Interface (Client Side)
-  *The experience for customers browsing prizes and purchasing tickets.*
-
-  ### Landing and Authentication
-  | Home Page | Sign In | Sign Up |
-  | :---: | :---: | :---: |
-  | <img src="screenshots/home_page.png" width="250"> | <img src="screenshots/user_login.png" width="250"> | <img src="screenshots/user_signin.png" width="250"> |
-
-  ### Prize Gallery and Selection
-  *Full width views for browsing available prizes.*
   
-  **Full Gallery View:**
-  <img src="screenshots/prizes_view_full.png" width="100%" alt="Full Gallery View">
+  ### Full Page Previews
+  *Below are the main entry points for customers, displayed in full width for detailed inspection.*
+
+  #### Main Landing Page
+  <img src="screenshots/home_page.png" width="100%" alt="Full Home Page View">
 
   <br>
 
-  **Additional Gallery Views:**
-  <div style="display: flex; overflow-x: auto; gap: 10px; padding-bottom: 10px;">
-    <img src="screenshots/prize_one_view.png" width="350" alt="Single Prize">
-    <img src="screenshots/packages_view.png" width="350" alt="Packages View">
-  </div>
+  #### Prizes Catalog
+  <img src="screenshots/prizes_view_full.png" width="100%" alt="Full Prizes Catalog View">
+
+  ---
+
+  ### Authentication & System States
+  | Sign In | Sign Up | Page Not Found (404) |
+  | :---: | :---: | :---: |
+  | <img src="screenshots/user_login.png" width="280"> | <img src="screenshots/user_signin.png" width="280"> | <img src="screenshots/not_found.png" width="280"> |
+
+  <br>
 
   ### Checkout Flow
-  *A structured journey from package selection to payment.*
+  *The step-by-step process of purchasing tickets and bundles.*
 
-  | Step 1: Package | Step 2: Information | Step 3: Confirmation | Shopping Cart |
-  | :---: | :---: | :---: | :---: |
-  | <img src="screenshots/order_step1.png" width="180"> | <img src="screenshots/order_step2full.png" width="300"> | <img src="screenshots/order_step3.png" width="180"> | <img src="screenshots/cart_view.png" width="180"> |
+  | Step 1: Package Selection | Step 2: Information | Step 3: Success |
+  | :---: | :---: | :---: |
+  | <img src="screenshots/order_step1.png" width="250"> | <img src="screenshots/order_step2full.png" width="350"> | <img src="screenshots/order_step3.png" width="250"> |
+
+  <br>
+
+  **Additional User Views:**
+  <div style="display: flex; overflow-x: auto; gap: 10px; padding-bottom: 10px;">
+    <img src="screenshots/cart_view.png" width="300" alt="Shopping Cart">
+    <img src="screenshots/prize_one_view.png" width="300" alt="Single Prize View">
+    <img src="screenshots/packages_view.png" width="300" alt="Packages Overview">
+  </div>
 
   ---
 
   ## Admin Dashboard (Management Side)
-  *Tools for system administration, donor management, and tracking.*
+  
+  ### Admin Inventory Control
+  *Specialized management interface with administrative functions and advanced controls.*
 
-  ### Donor and Order Management
-  **Full Donor Management View:**
-  <img src="screenshots/donors_view_full.png" width="100%">
+  #### Prize Management (Admin View)
+  <img src="screenshots/prizes_view_admin.png" width="100%" alt="Admin Prize Management Dashboard">
 
   <br>
 
-  | Add Donor | Orders Overview | Reports |
-  | :---: | :---: | :---: |
-  | <img src="screenshots/donor_add.png" width="250"> | <img src="screenshots/orders_view.png" width="250"> | <img src="screenshots/reports_view.png" width="250"> |
+  #### Donor Management (Full View)
+  <img src="screenshots/donors_view_full.png" width="100%" alt="Full Donor Management">
 
-  ### Inventory and System Tools
+  ---
+
+  ### Admin Tools & Activity
+  | Add New Donor | Orders Overview | Analytics Reports |
+  | :---: | :---: | :---: |
+  | <img src="screenshots/donor_add.png" width="280"> | <img src="screenshots/orders_view.png" width="280"> | <img src="screenshots/reports_view.png" width="280"> |
+
+  <br>
+
+  ### System Operations & Utilities
+  *Internal administrative functions and status indicators.*
   <div style="display: flex; overflow-x: auto; gap: 10px; padding-bottom: 10px;">
+    <img src="screenshots/total.gif" width="300" alt="Total Calculation Admin">
+    <img src="screenshots/user_logout.gif" width="300" alt="Admin Logout Animation">
     <img src="screenshots/packages_admin.png" width="300" title="Admin Packages">
     <img src="screenshots/prize_add.png" width="300" title="Add Prize">
     <img src="screenshots/prize_delete.png" width="300" title="Delete Prize">
-    <img src="screenshots/donors_view.png" width="300" title="Donor List">
     <img src="screenshots/order_one_view.png" width="300" title="Order Details">
     
   </div>
 
-  ---
-
-  ## UI Components and States
-  *Error handling and system animations.*
-
-  <div style="display: flex; overflow-x: auto; gap: 10px;">
-    <img src="screenshots/not_found.png" width="250" title="404 Error">
-    <img src="screenshots/total.gif" width="250" title="Total Calculation">
-    <img src="screenshots/user_logout.gif" width="250" title="Secure Logout">
-  </div>
 
 </details>
-## Getting Started
+
+##  Getting Started
 Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
