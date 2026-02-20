@@ -94,17 +94,17 @@ This project is the frontend client built with Angular. It communicates with a R
 
   <br>
 
-  ### System Operations & Utilities
-  *Internal administrative functions and status indicators.*
-  <div style="display: flex; overflow-x: auto; gap: 10px; padding-bottom: 10px;">
-    <img src="screenshots/total.gif" width="300" alt="Total Calculation Admin">
-    <img src="screenshots/user_logout.gif" width="300" alt="Admin Logout Animation">
-    <img src="screenshots/packages_admin.png" width="300" title="Admin Packages">
-    <img src="screenshots/prize_add.png" width="300" title="Add Prize">
-    <img src="screenshots/prize_delete.png" width="300" title="Delete Prize">
-    <img src="screenshots/order_one_view.png" width="300" title="Order Details">
-    
-  </div>
+ ###  System Operations & Utilities
+*Internal administrative functions and status indicators.*
+
+| Preview | Function Description |
+| :--- | :--- |
+| <img src="screenshots/total.gif" width="200"> | **Total Calculation:** Total Income: Real-time revenue calculation. |
+| <img src="screenshots/user_logout.gif" width="200"> | **Secure Logout**: Admin routes (e.g., /orders) revert to 404 for non-admins |
+| <img src="screenshots/packages_admin.png" width="200"> | Package Management: Full CRUD operations for packages. |
+| <img src="screenshots/prize_add.png" width="200"> | **Update Prize:** Editing existing prize. |
+| <img src="screenshots/prize_delete.png" width="200"> | **Delete Prize:** Administrative tool to remove existing prizes. |
+| <img src="screenshots/order_one_view.png" width="200"> | **Order Details:** Detailed view for specific order data. |
 
 
 </details>
