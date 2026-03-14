@@ -31,10 +31,15 @@ To get a local copy up and running, follow these steps:
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/naama-git/ChineseAuction.git](https://github.com/naama-git/ChineseAuction.git)
+   git clone https://github.com/naama-git/chinese-auction-project
+   ```
 
 2. **Configuration:**
 Please refer to the internal README.md files located within the Client and Server folders for specific environment setup, prerequisites, and execution commands.
+
+
+---
+
 
 _Note: This project was created for educational purposes to practice full-stack development._
 
