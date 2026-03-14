@@ -36,4 +36,6 @@ To get a local copy up and running, follow these steps:
 2. **Configuration:**
 Please refer to the internal README.md files located within the Client and Server folders for specific environment setup, prerequisites, and execution commands.
 
-_Note: This project was created for educational purposes and software development practice only._
+_Note: This project was created for educational purposes to practice full-stack development._
+
+
